@@ -1,4 +1,4 @@
-package sample;
+package tutorial;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -12,17 +12,14 @@ import javafx.scene.control.Button;
 
 public class Main extends Application implements EventHandler<ActionEvent> {
 
-    Button button;
+    Button button, button2, button3;
     @Override
     public void start(Stage primaryStage) throws Exception{
         //In JavaFX the entire window is 'Stage'.
         //The content inside of the window is 'Scene'
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
         //set the window title, primaryStage is the main window
         primaryStage.setTitle("JavaFX Tutorial");
-        primaryStage.setScene(new Scene(root, 300, 275));
 
         //set the layout
         StackPane mainPane = new StackPane();
@@ -30,9 +27,30 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         button = new Button();
         button.setText("Click Me");
 
+        button2 = new Button();
+        button2.setText("Something New");
+
+        button3 = new Button();
+        button3.setText("Awesome");
+
         //Add the button to the Actionevent Handler
+        //Here has multiple way to hold up the button to the event listener
         button.setOnAction(this);
+
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("This is another way to hold up the button to the action listener");
+            }
+        });
+
+        //use the lamda to code action even easier
+        button3.setOnAction(e -> System.out.println("This way even easier."));
+
+       //add the elements into the main scene
         mainPane.getChildren().add(button);
+        mainPane.getChildren().add(button2);
+        mainPane.getChildren().add(button3);
 
         //create the
         Scene mainScene = new Scene(mainPane, 300, 250);
