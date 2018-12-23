@@ -3,16 +3,15 @@ package tutorial;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
-public class Main extends Application implements EventHandler<ActionEvent> {
+public class basicLesson extends Application implements EventHandler<ActionEvent> {
 
     Button button, button2, button3;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         //In JavaFX the entire window is 'Stage'.
@@ -22,7 +21,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         primaryStage.setTitle("JavaFX Tutorial");
 
         //set the layout
-        StackPane mainPane = new StackPane();
+        VBox mainPane = new VBox();
 
         button = new Button();
         button.setText("Click Me");
