@@ -1,0 +1,8 @@
+# ignore all logs
+*.log
+
+#ignore folder name "out"
+out/
+
+#ignore all compiled file
+*.class
