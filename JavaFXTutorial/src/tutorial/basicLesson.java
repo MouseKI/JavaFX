@@ -1,8 +1,18 @@
 package tutorial;
 
+/***********************************************************
+ * Self-taught note for learning basic JavaFx knowledge
+ * Author: Runquan Ye
+ * Date:Jan./21/2019
+ * JavaFx Tutorial 01 - Create Basic Window
+ * JavaFx Tutorial 02 - EventHandler
+ * JavaFx Tutorial 0e - Lambda Expression
+ ***********************************************************/
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -50,6 +60,7 @@ public class basicLesson extends Application implements EventHandler<ActionEvent
         mainPane.getChildren().add(button);
         mainPane.getChildren().add(button2);
         mainPane.getChildren().add(button3);
+        mainPane.setAlignment(Pos.CENTER);
 
         //create the
         Scene mainScene = new Scene(mainPane, 300, 250);

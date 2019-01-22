@@ -8,6 +8,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
+/***********************************************************
+ * Self-taught note for learning basic JavaFx knowledge
+ * Author: Runquan Ye
+ * Date:Jan./21/2019
+ * JavaFx Tutorial 05 Part2 - Create Alert Boex(Pop Windown)
+ ***********************************************************/
 public class popWindow {
     public static void display(String title, String message){
         Button button;

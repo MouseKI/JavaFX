@@ -1,11 +1,19 @@
 package tutorial;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
+
+/***********************************************************
+ * Self-taught note for learning basic JavaFx knowledge
+ * Author: Runquan Ye
+ * Date:Jan./21/2019
+ * JavaFx Tutorial 04 - Switching Scenes
+ ***********************************************************/
 
 public class multipleScene extends Application  {
 
@@ -23,6 +31,7 @@ public class multipleScene extends Application  {
 
         VBox layout1 = new VBox(20);
         layout1.getChildren().addAll(label1,button1);
+        layout1.setAlignment(Pos.CENTER);
 
         scene1 = new Scene(layout1, 200, 200);
 
